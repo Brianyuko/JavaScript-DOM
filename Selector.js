@@ -20,3 +20,8 @@ var category = document.getElementsByTagName('li');
 category[0].innerHTML = 'FrontEnd Developer'
 category[1].innerHTML = 'BackEnd Developer'
 category[2].innerHTML = 'FullStack Developer'
+
+// Query Selector All
+document.querySelectorAll('#box1')[0].innerHTML = "Querry Selector id BOX 0"
+document.querySelectorAll('.boxes')[0].innerHTML = "Querry Selector class boxes 0"
+document.querySelectorAll('ul div')[0].innerHTML = "Querry Selector tag ul div"
