@@ -1,6 +1,9 @@
 var img = document.getElementById('ImageLinux');
 img.width = 400
 
+var submit = document.getElementById('submit')
+var span = document.getElementById('p1')
+
 // Option One
 //img.setAttribute('class', 'background')
 
@@ -19,23 +22,22 @@ function animateIn(){
 function animateOut(){
     img.style.backgroundColor = 'pink'
 }
+function submitShow(){
+    var text = input.value;
+    span.innerHTML = text;
+}
 
 // EVENT 
 
 // Option One
 // Menambahkan attribut di tag, contohnya onClick, lalu diisi dengan function
-// function changeColor(){
-//     img.style.backgroundColor = 'blue'
-// }
+input.onclick = animateIn
+submit.onclick = submitShow
 
 // Option Two
-// img.onmouseenter = function(){ animateIn()};
+// img.onmouseenter = animateIn
 
 
-// Option Three
-img.addEventListener('mouseenter', function(){
-     animateIn();
- });
-img.addEventListener('mouseleave', function(){
-     animateOut();
- })
+// // Option Three
+img.addEventListener('mouseenter', animateIn)
+img.addEventListener('mouseleave', animateOut)
